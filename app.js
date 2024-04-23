@@ -80,6 +80,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(port, () =>
-  console.log(`Server is listening at http://localhost:${port}`),
-);
+app.listen(process.env.port || 3000, () => {
+  console.log("Server is listening on port 3000");
+});
